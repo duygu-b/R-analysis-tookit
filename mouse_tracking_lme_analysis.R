@@ -7,9 +7,7 @@ library(tidyr) # for data reshaping (if needed in later steps)
 df_long <- df_long %>%
   group_by(participant, sentence_id) %>%
   arrange(t) %>%
-  mutate(
-    t_norm = (t - min(t)) / (max(t) - min(t))
-  )
+  mutate(t_norm = (t - min(t)) / (max(t) - min(t)))
 # Step2: Compute Maximum Deviation (MD)
 # MD captures the largest spatial deviation from the mean trajectory per trial
 md <- df_long %>%
@@ -23,8 +21,7 @@ auc <- df_long %>%
   arrange(t) %>%
   mutate(
     deviation = abs(x - mean(x)),
-    dt = t - lag(t)
-  ) %>%
+    dt = t - lag(t)) %>%
   summarise(AUC = sum(deviation * dt, na.rm = TRUE))
 
 # Step4: Add trial-level condition information to AUC dataset
