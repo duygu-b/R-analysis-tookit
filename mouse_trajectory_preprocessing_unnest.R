@@ -16,8 +16,8 @@ df <- read_excel("documents/All.xlsx", sheet="ambiguous")
 # We convert each JSON string into a data.frame (list of coordinates per trial)
 df$events <- lapply(df$mouse_trajectory, function(x) {
   if (is.na(x)) return(data.frame()) # handle missing data safely
-  fromJSON(x)                         # convert JSON string into structured data
-})
+  fromJSON(x)})                      # convert JSON string into structured data
+
 # Step3: Unnest trajectory data
 # Expands each trial's nested coordinates into long format (one row per timestamp)
 df_long <- df %>% unnest(events)
