@@ -54,7 +54,7 @@ The analysis:
 - Converts predictors into factors
 - Tests main effects and interaction of sentence type and previous Stroop condition using a linear model (no random effects)
 
-# unnesting_json_file = JSON ROI Transition Preprocessing
+# json_roi_preprocessing = JSON ROI Transition Preprocessing
 Preprocessing eye-tracking (or mouse-tracking) data containing JSON-encoded ROI transition information.
 
 This script was developed using eye-tracking data and demonstrates a general workflow for converting nested JSON trajectory data into a structured long-format dataset.
@@ -66,5 +66,10 @@ The pipeline:
 - Filters data to retain relevant time windows (e.g., post-preparation phase)
 - Exports cleaned dataset for further statistical analysis
 
-Although this implementation uses eye-tracking data as an example, the same approach can be applied to any dataset containing JSON-encoded temporal or spatial trajectories.
+
+# unnesting_json_file 
+- Loads trial-level data from Excel
+- Parses JSON strings 
+- Expands nested trajectory data into long format (one row per timestamp)
+- Exports cleaned dataset for further statistical analysis
 
