@@ -73,3 +73,13 @@ The pipeline:
 - Expands nested trajectory data into long format (one row per timestamp)
 - Exports cleaned dataset for further statistical analysis
 
+# permutation_testing_gaze = Manuel permutation testing
+- Loads and prepares gaze latency data from Excel
+- Converts variables to appropriate formats
+- Visualizes target look latency across conditions
+- Computes observed mean difference between ambiguous and unambiguous conditions (incongruent Stroop trials only)
+- Runs a permutation test (9,999 iterations) by shuffling condition labels within Stroop context
+- Builds a null distribution of mean differences
+- Calculates a two-tailed p-value based on the null distribution
+- Plots the permutation distribution
+
