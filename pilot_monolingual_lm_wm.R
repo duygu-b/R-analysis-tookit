@@ -1,6 +1,6 @@
 install.packages("readxl")
 library(readxl)
-df <- read.csv("documents/all.csv") # Loading dataset (pilot monolingual data)
+df <- read_excel("documents/all.xlsx") # Loading dataset (pilot monolingual data)
 
 df$logRT <- log(df$CriticalRegionRT) # Log-transform reaction times to reduce skewness in RT distribution
 df$condition <- factor(df$condition) # Converting categorical predictors into factors for modeling
