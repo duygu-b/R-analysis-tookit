@@ -25,7 +25,7 @@ on log-transformed critical region reaction times.
 
 Random intercepts are included for both participants and sentence items to account for individual and item-level variability.
 
-# mouse_tracking_lme_analysis = Mouse Trajectory Analysis
+# mouse_measures = Mouse Trajectory Analysis
 Calculating mouse-tracking measures, including Maximum Deviation (MD) and Area Under the Curve (AUC), from normalized cursor trajectories.
 
 The script:
@@ -36,14 +36,6 @@ The script:
 
 Random intercepts are included for participants to account for individual variability.
 
-# mouse_trajectory_preprocessing_unnest = Mouse Trajectory Data Processing for unnesting JSON file
-Preprocessing mouse-tracking data stored in JSON format.
-
-The script:
-- Imports trial-level data from Excel
-- Parses nested JSON mouse trajectories
-- Converts trajectory coordinates into a long-format dataset
-- Exports the processed data for subsequent mouse-tracking analyses (e.g., Maximum Deviation and Area Under the Curve)
 
 # pilot_monolingual_lm = Pilot Linear Model (Monolingual Data)
 A pilot analysis using a simple linear model in R.
